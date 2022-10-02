@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/gifsFragment">
+
+    <fragment
+        android:id="@+id/gifsFragment"
+        android:name="com.example.gifsapp.fragments.GifsFragment"
+        android:label="GifsFragment" >
+        <action
+            android:id="@+id/action_gifsFragment_to_largeGifsFragment"
+            app:destination="@id/largeGifsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/largeGifsFragment"
+        android:name="com.example.gifsapp.fragments.LargeGifsFragment"
+        android:label="LargeGifsFragment">
+        <argument
+            android:name="position"
+            app:argType="integer"
+            app:nullable="false"/>
+    </fragment>
+
+</navigation>
